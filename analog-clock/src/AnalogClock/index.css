@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
-.App {
-  font-family: sans-serif;
+.clock-parent {
+  width: 300px;
+  height: 300px;
+  position: relative;
 }
 
 .clock {
