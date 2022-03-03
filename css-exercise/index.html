@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercise</title>
+  <meta name="description" content="A simple HTML page">
+  <style>
+    body,
+    h1,
+    h2 {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+    Top portion
+    */
+    .top-section {
+      background-color: black;
+      text-align: center;
+      margin-bottom: -50px;
+    }
+
+    .myapp-container {
+      width: 900px;
+      margin: auto;
+    }
+
+    .myapp {
+      color: lightgray;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 90px;
+      font-weight: 100;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      left: 250px;
+      top: 100px;
+    }
+
+    .myapp-spaceship {
+      border: 10px white solid;
+      border-radius: 20px;
+      order: -1;
+      width: 410px;
+      position: relative;
+      right: 200px;
+    }
+
+    .myapp-content {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      text-align: center;
+      width: 400px;
+      position: relative;
+      left: 500px;
+      top: -200px;
+    }
+
+    .myapp-button {
+      background-color: deeppink;
+      border-top: 0;
+      border-left: 0;
+      border-right: 2px darkred solid;
+      border-bottom: 2px darkred solid;
+      border-radius: 10px;
+      color: white;
+      padding: 15px 45px 15px 45px;
+      position: relative;
+      top: -190px;
+      left: 250px;
+    }
+
+    /*
+    My list
+    */
+    .mylist-container {
+      background-color: purple;
+      margin: auto;
+      width: auto;
+      text-align: center;
+    }
+
+    .mylist {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
+      font-weight: normal;
+      text-align: center;
+      text-transform: capitalize;
+      padding: 40px;
+    }
+
+    .mylist-flex {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mylist-item {
+      background-color: white;
+      border-radius: 15px;
+      display: flex;
+    }
+
+    .mylist-item-avatar {
+      margin: auto;
+      padding: 10px;
+    }
+
+    .mylist-item-avatar-img {
+      border-radius: 50%;
+      width: 125px;
+      display: flex;
+    }
+
+    .mylist-item-content {
+      background-color: #3f0e4e;
+      flex: 1;
+      padding: 10px 30px 10px 30px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      width: 350px;
+    }
+
+    .mylist-item-content-header {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    .mylist-item-content-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: lightgray;
+    }
+
+    .mylist-item-content-date {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      color: white;
+      letter-spacing: 2px;
+      text-align: right;
+    }
+
+    .mylist-button {
+      background-color: #efefef;
+      border-top: 2px gray solid;
+      border-left: 2px gray solid;
+      border-right: 2px black solid;
+      border-bottom: 2px black solid;
+      border-radius: 10px;
+      color: black;
+      font-size: 15px;
+      font-weight: bolder;
+      padding: 20px 65px 20px 65px;
+      margin: 20px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+
+      /*
+       Top portion
+    */
+      .top-section {
+        background-color: black;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+
+      .myapp-container {
+        width: auto;
+        margin: auto;
+      }
+
+      .myapp {
+        color: lightgray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 90px;
+        font-weight: 100;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+      .myapp-spaceship {
+        border: 10px white solid;
+        border-radius: 20px;
+        order: -1;
+        width: 410px;
+        position: relative;
+        right: 0px;
+      }
+
+      .myapp-content {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        padding: 15px;
+        text-align: center;
+        width: auto;
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+      .myapp-button {
+        background-color: deeppink;
+        border-top: 0;
+        border-left: 0;
+        border-right: 2px darkred solid;
+        border-bottom: 2px darkred solid;
+        border-radius: 10px;
+        color: white;
+        padding: 15px 45px 15px 45px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 30px;
+      }
+    }
+
+  </style>
+</head>
+<!-- The rest of your HTML code is here -->
+
+<body>
+  <section class="top-section">
+    <div class="myapp-container">
+      <h1 class="myapp">My app</h1>
+      <img class="myapp-spaceship" src="https://i.pinimg.com/564x/ab/5b/1d/ab5b1d9c1bb06519c965dc87bffb0e5a.jpg"
+        alt="header rocket" />
+      <p class="myapp-content">
+        Lorem ipsum is placeholder text commonly used in the graphic, print,
+        and publishing industries for previewing layouts and visual mockups.
+      </p>
+      <button class="myapp-button">Test Now</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="mylist-container">
+      <h2 class="mylist">My List</h2>
+      <div class="mylist-flex">
+
+        <div class="mylist-item">
+          <div class="mylist-item-avatar"><img class="mylist-item-avatar-img"
+              src="https://www.svgrepo.com/show/26996/avatar.svg" alt="alt-avatar" />
+          </div>
+          <div class="mylist-item-content">
+            <p class="mylist-item-content-header">my first thing</p>
+            <p class="mylist-item-content-text">
+              Lorem ipsum is placeholder text commonly used in the graphic,
+              print, and publishing industries for previewing layouts and
+              visual mockups.
+            </p>
+            <p class="mylist-item-content-date">01/01/2020</p>
+          </div>
+        </div>
+
+        <div class="mylist-item">
+          <div class="mylist-item-avatar"><img class="mylist-item-avatar-img"
+              src="https://www.svgrepo.com/show/26996/avatar.svg" alt="alt-avatar" />
+          </div>
+          <div class="mylist-item-content">
+            <p class="mylist-item-content-header">my first thing</p>
+            <p class="mylist-item-content-text">
+              Lorem ipsum is placeholder text commonly used in the graphic,
+              print, and publishing industries for previewing layouts and
+              visual mockups.
+            </p>
+            <p class="mylist-item-content-date">01/01/2020</p>
+          </div>
+        </div>
+
+        <div class="mylist-item">
+          <div class="mylist-item-avatar"><img class="mylist-item-avatar-img"
+              src="https://www.svgrepo.com/show/26996/avatar.svg" alt="alt-avatar" />
+          </div>
+          <div class="mylist-item-content">
+            <p class="mylist-item-content-header">my first thing</p>
+            <p class="mylist-item-content-text">
+              Lorem ipsum is placeholder text commonly used in the graphic,
+              print, and publishing industries for previewing layouts and
+              visual mockups.
+            </p>
+            <p class="mylist-item-content-date">01/01/2020</p>
+          </div>
+        </div>
+
+        <div class="mylist-item">
+          <div class="mylist-item-avatar"><img class="mylist-item-avatar-img"
+              src="https://www.svgrepo.com/show/26996/avatar.svg" alt="alt-avatar" />
+          </div>
+          <div class="mylist-item-content">
+            <p class="mylist-item-content-header">my first thing</p>
+            <p class="mylist-item-content-text">
+              Lorem ipsum is placeholder text commonly used in the graphic,
+              print, and publishing industries for previewing layouts and
+              visual mockups.
+            </p>
+            <p class="mylist-item-content-date">01/01/2020</p>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="mylist-button">Test Now</button>
+    </div>
+  </section>
+</body>
+
+</html>
