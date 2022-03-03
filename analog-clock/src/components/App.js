@@ -7,7 +7,7 @@ const localTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
 const londonTZ = 'Europe/London';
 const hasDst = hasDST();
 
-function App() {
+const App = () => {
   const [applyDST, setApplyDST] = useState(false);
 
   return (
@@ -35,6 +35,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

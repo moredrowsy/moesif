@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './index.css';
 
-function AnalogClock({ hourOffset = 0, tz }) {
+const AnalogClock = ({ hourOffset = 0, tz }) => {
   const [time, setTime] = useState(
     tz
       ? new Date(new Date().toLocaleString('en-US', { timeZone: tz }))
       : new Date()
   );
 
+  // Get new time every second
   useEffect(() => {
     const intervalId = setInterval(() => {
       setTime(
@@ -61,6 +63,11 @@ function AnalogClock({ hourOffset = 0, tz }) {
       </div>
     </div>
   );
-}
+};
 
 export default AnalogClock;
+
+AnalogClock.propTypes = {
+  hourOffset: PropTypes.number,
+  tz: PropTypes.string,
+};
