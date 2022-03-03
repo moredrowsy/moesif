@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
 
-function AnalogClock({ tz }) {
+function AnalogClock({ hourOffset = 0, tz }) {
   const [time, setTime] = useState(
     tz
       ? new Date(new Date().toLocaleString('en-US', { timeZone: tz }))
@@ -19,6 +19,11 @@ function AnalogClock({ tz }) {
 
     return () => clearInterval(intervalId);
   }, [tz]);
+
+  // Adjust for hour offset if provided (ie day light saving)
+  if (hourOffset > 0) {
+    time.setHours(time.getHours() + hourOffset);
+  }
 
   return (
     <div className='clock-parent'>
