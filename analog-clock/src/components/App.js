@@ -19,7 +19,7 @@ const App = () => {
           name='applyDST'
           value={applyDST}
           onChange={() => setApplyDST(!applyDST)}
-          disabled={!hasDst}
+          disabled={hasDst}
         />
         <label htmlFor='applyDST'>Apply DST</label>
       </div>
