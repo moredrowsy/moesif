@@ -22,18 +22,13 @@ const AnalogClock = ({ hourOffset = 0, tz }) => {
     return () => clearInterval(intervalId);
   }, [tz]);
 
-  // Adjust for hour offset if provided (ie day light saving)
-  if (hourOffset > 0) {
-    time.setHours(time.getHours() + hourOffset);
-  }
-
   return (
     <div className='clock-parent'>
       <div className='clock'>
         <div
           className='hour_hand'
           style={{
-            transform: `rotateZ(${time.getHours() * 30}deg)`,
+            transform: `rotateZ(${(time.getHours() + hourOffset) * 30}deg)`,
           }}
         />
         <div
